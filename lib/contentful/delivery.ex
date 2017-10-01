@@ -29,7 +29,7 @@ defmodule Contentful.Delivery do
       params)
 
     cond do
-      params["resolve_includes"] == false ->
+      params["include"] == false ->
         response["items"]
       true ->
         response
