@@ -26,7 +26,7 @@ defmodule Contentful.Delivery do
     response = contentful_request(
       entries_url,
       access_token,
-      Map.delete(params, "resolve_includes"))
+      params)
 
     cond do
       params["resolve_includes"] == false ->
